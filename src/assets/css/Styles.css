@@ -1,0 +1,38 @@
+.header{
+    display: flex;
+    /* background: #61dafb; */
+    justify-content: space-between;
+    align-items: center;
+}
+.dropdownTogle{
+    background: transparent;
+    justify-content: center;
+    align-items: center;
+
+    --bs-btn-color: #fff;
+    --bs-btn-bg: transparent; 
+    --bs-btn-border-color: transparent;
+    --bs-btn-hover-color: #fff;
+    --bs-btn-hover-bg: transparent;
+    --bs-btn-hover-border-color: black;
+    --bs-btn-focus-shadow-rgb: 49,132,253;
+    --bs-btn-active-color: #fff;
+    --bs-btn-active-bg: transparent;
+    --bs-btn-active-border-color: transparent;
+    --bs-btn-active-shadow: inset 0 3px 5pxrgba(0, 0, 0, 0.125);
+    --bs-btn-disabled-color: #fff;
+    --bs-btn-disabled-bg: #0d6efd;
+    --bs-btn-disabled-border-color: #0d6efd;
+}
+.mainMenu{
+    font-weight: 500;
+    justify-content: flex-end;
+    align-items: center;
+}
+.bg {
+    background-image: url("https://mdbootstrap.com/img/Photos/Horizontal/Nature/full page/img(20).webp");
+    height: 100vh;
+    background-position: absolute;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
