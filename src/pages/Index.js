@@ -2,8 +2,16 @@ import React from 'react';
 import {Container, Row, Col, Dropdown} from 'react-bootstrap';
 import { FiMenu, FiInfo, FiList, FiPackage, FiUsers, FiPhone } from "react-icons/fi";
 import { FaAward, FaRegHandPeace, FaHandshake, FaLightbulb } from "react-icons/fa";
-import logo from '../assets/images/logo.png'
-import imgabout from '../assets/images/imgabout.png'
+import { Carousel } from 'react-responsive-carousel';
+import EmblaCarousel from "./EmblaCarousel";
+import "../assets/css/Base.css";
+import "../assets/css/Reset.css";
+import "react-responsive-carousel/lib/styles/carousel.min.css";
+import logo from '../assets/images/logo.png';
+import imgabout from '../assets/images/imgabout.png';
+import bricket from '../assets/images/bricket.png';
+import oil from '../assets/images/oil.png';
+import sugar from '../assets/images/sugar.png';
 function Index() {
   return (
     <Container fluid>
@@ -118,6 +126,54 @@ function Index() {
             </div>
           </Col>
         </Row>
+      </section>
+
+      <section>
+        <EmblaCarousel autoplay delayLength={2000}>
+          <Row style={{padding: '50px 100px'}}>
+            <Col md={6} sm={12} className='d-flex flex-column gap-3' style={{textAlign:'left'}}>
+              <div>
+                Our Product
+              </div>
+              <div>
+                Charcoal Briquette
+              </div>
+              <div>
+                <p>
+                Coconut Charcoal Briquette is compact block charcoal that is made from coconut shell charcoal. Our charcoal briquette is made of granular coconut shell charcoal that is crushed charcoal and molded using a natural binder. As a fuel, it is hotter and lasts longer than ordinary charcoal.
+                </p>
+                <p>
+                Universal Coco charcoal briquette manufacturer is located in East Java, Indonesia. We only produce charcoal briquette from the best quality local coconut shells and wood without adding any harmful chemicals. It is suitable for household use both indoors and outdoors. Also, it can be used in food industries, for barbecue, stove fuel, metallurgy, etc.
+                </p>
+              </div>
+            </Col>
+            <Col md={6} sm={12}>
+              <img src={bricket} style={{width: '80%', borderRadius: '10px'}} alt='img1'></img>
+            </Col>
+          </Row>
+
+          <Row style={{padding: '50px 100px'}}>
+            <Col md={6} sm={12} className='d-flex flex-column gap-3' style={{textAlign:'left'}}>
+              <div>
+                Our Product
+              </div>
+              <div>
+                Charcoal Briquette
+              </div>
+              <div>
+                <p>
+                Coconut Charcoal Briquette is compact block charcoal that is made from coconut shell charcoal. Our charcoal briquette is made of granular coconut shell charcoal that is crushed charcoal and molded using a natural binder. As a fuel, it is hotter and lasts longer than ordinary charcoal.
+                </p>
+                <p>
+                Universal Coco charcoal briquette manufacturer is located in East Java, Indonesia. We only produce charcoal briquette from the best quality local coconut shells and wood without adding any harmful chemicals. It is suitable for household use both indoors and outdoors. Also, it can be used in food industries, for barbecue, stove fuel, metallurgy, etc.
+                </p>
+              </div>
+            </Col>
+            <Col md={6} sm={12}>
+              <img src={bricket} style={{width: '80%', borderRadius: '10px'}} alt='img1'></img>
+            </Col>
+          </Row>
+        </EmblaCarousel>
       </section>
     </Container>
   );
