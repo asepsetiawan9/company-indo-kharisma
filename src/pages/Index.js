@@ -1,21 +1,20 @@
 import React from 'react';
 import {Container, Row, Col, Dropdown} from 'react-bootstrap';
 import { FiMenu, FiInfo, FiList, FiPackage, FiUsers, FiPhone } from "react-icons/fi";
-import { FaAward, FaRegHandPeace, FaHandshake, FaLightbulb } from "react-icons/fa";
+import { FaAward, FaRegHandPeace, FaHandshake, FaLightbulb, FaLinkedin, FaInstagramSquare, FaFacebookSquare, FaInstagram } from "react-icons/fa";
 import { Carousel } from 'react-responsive-carousel';
-import EmblaCarousel from "./EmblaCarousel";
-import "../assets/css/Base.css";
-import "../assets/css/Reset.css";
+import { FloatingWhatsApp } from 'react-floating-whatsapp'
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import logo from '../assets/images/logo.png';
 import imgabout from '../assets/images/imgabout.png';
 import bricket from '../assets/images/bricket.png';
+import user from '../assets/images/user.png';
 import oil from '../assets/images/oil.png';
 import sugar from '../assets/images/sugar.png';
 function Index() {
   return (
     <Container fluid>
-      <Row style={{paddingLeft: '100px', paddingRight: '100px'}}>
+      <Row className='menuBar'>
         <Col className='header' md={4} >
           <div>
             <img style={{width: '80px'}} src={logo} alt='Logo'></img>
@@ -47,7 +46,7 @@ function Index() {
       </Row>
       <section>
         <Row>
-          <div className="bg d-flex" style={{justifyContent: 'center', alignItems: 'center', paddingLeft: '100px', paddingRight: '100px'}}>
+          <div className="bg d-flex justify-content-center" style={{alignItems: 'center', paddingLeft: '100px', paddingRight: '100px'}}>
             <Col md={6} >
               <div style={{fontSize: '30px', fontWeight: '500'}}>
                 Supplying across the globe
@@ -64,7 +63,7 @@ function Index() {
 
       <section>
         <Row>
-          <Col md={6} sm={12} style={{padding: '100px 100px'}}>
+          <Col md={6} sm={12} className='aboutUs'>
             <div style={{fontSize: '35px', fontWeight: '500'}}>About Us</div>
             <div style={{fontSize: '22px', padding: '20px 0px'}}>Universal Coco Indonesia is the leading supplier of coconut products from Indonesia. We are a company engaged in manufacturing various coconut products with high-quality materials. We process more than 1,500 hectares of coconut plantations, spread across several islands in Eastern Indonesia.</div>
             <div style={{padding: '20px 0px'}}>In the beginning, our company was engaged in manufacturing where we processed coconut derivative products, namely coconut shells into coconut shell charcoal. And after that our company expanded and expanded into coconut plantations, to process more derivative products.</div>
@@ -77,8 +76,8 @@ function Index() {
       </section>
 
       <section>
-        <Row style={{padding: '0px 100px'}}>
-          <Col md={12} style={{fontSize: '35px', fontWeight: '500', textAlign: 'center', paddingBottom: '50px'}}>
+        <Row className='keyFeature'>
+          <Col md={12} className='keyFeatureTittle'>
             Our Key Features
           </Col>
           <Col md={6} sm={12} className='d-flex flex-column gap-3' style={{padding: '24px'}}>
@@ -86,7 +85,7 @@ function Index() {
               <FaRegHandPeace size={50}/>
             </div>
             
-            <div>
+            <div className='keySubTittle'>
               Integrity
             </div>
             <div>
@@ -98,7 +97,7 @@ function Index() {
               <FaAward size={50}/>
             </div>
 
-            <div>Quality</div>
+            <div className='keySubTittle'>Quality</div>
             <div>
               Quality is exhibited in many ways by selling and supporting products and services that delight customers, establishing a work environment, and delivering financial results that meet investor expectations.
             </div>
@@ -108,7 +107,7 @@ function Index() {
               <FaLightbulb size={50}/>
             </div>
             
-            <div>
+            <div className='keySubTittle'>
               Innovation
             </div>
             <div>
@@ -120,7 +119,7 @@ function Index() {
               <FaHandshake size={50}/>
             </div>
             
-            <div>Commitment</div>
+            <div className='keySubTittle'>Commitment</div>
             <div>
               Commitment is important where we will continue to provide the best to our customers and investors all the time. Our opportunity to serve should be viewed as a privilege that is not to be taken for granted.
             </div>
@@ -128,9 +127,9 @@ function Index() {
         </Row>
       </section>
 
-      <section>
-        <EmblaCarousel autoplay delayLength={2000}>
-          <Row style={{padding: '50px 100px'}}>
+      <section style={{backgroundColor: '#f6f7f6'}}>
+        <Carousel autoPlay infiniteLoop swipeable interval={5000}>
+          <Row className='productImage'>
             <Col md={6} sm={12} className='d-flex flex-column gap-3' style={{textAlign:'left'}}>
               <div>
                 Our Product
@@ -145,6 +144,11 @@ function Index() {
                 <p>
                 Universal Coco charcoal briquette manufacturer is located in East Java, Indonesia. We only produce charcoal briquette from the best quality local coconut shells and wood without adding any harmful chemicals. It is suitable for household use both indoors and outdoors. Also, it can be used in food industries, for barbecue, stove fuel, metallurgy, etc.
                 </p>
+              </div>
+              <div>
+                <button style={{padding: '10px 30px', borderRadius: '10px'}}>
+                  Contact Us
+                </button>
               </div>
             </Col>
             <Col md={6} sm={12}>
@@ -152,7 +156,7 @@ function Index() {
             </Col>
           </Row>
 
-          <Row style={{padding: '50px 100px'}}>
+          <Row className='productCaro'>
             <Col md={6} sm={12} className='d-flex flex-column gap-3' style={{textAlign:'left'}}>
               <div>
                 Our Product
@@ -173,7 +177,126 @@ function Index() {
               <img src={bricket} style={{width: '80%', borderRadius: '10px'}} alt='img1'></img>
             </Col>
           </Row>
-        </EmblaCarousel>
+        </Carousel>
+      </section>
+
+      <section>
+        <Row className='d-flex justify-content-center ourTeam'>
+          <div style={{textAlign: 'center', paddingBottom: '40px', fontSize: '40px'}}>
+            Our Team
+          </div>
+          <Col md={4} sm={12} className='d-flex gap-2 flex-column'>
+            <div>
+            <img src={user} style={{width: '40%'}} alt='user'></img>
+            </div>
+            <div style={{color: 'green', fontWeight: '500'}}>
+              Depi
+            </div>
+            <div style={{fontWeight: '500'}}>
+              Founder
+            </div>
+            <div>
+              Our faith is the substance of our future. There is no big success without big sacrifice.
+            </div>
+            <div className='d-flex gap-2 justify-content-center'>
+              <a target="blank" href="https://linkdin.com">
+                <FaLinkedin size={25}/>
+              </a>
+              <a target="blank" href="https://linkdin.com">
+                <FaFacebookSquare size={25}/>
+              </a>
+              <a target="blank" href="https://linkdin.com">
+                <FaInstagramSquare size={25}/>
+              </a>
+            </div>
+          </Col>
+          <Col md={4} sm={12} className='d-flex gap-2 flex-column'>
+            <div>
+            <img src={user} style={{width: '40%'}} alt='user'></img>
+            </div>
+            <div style={{color: 'green', fontWeight: '500'}}>
+              Depi
+            </div>
+            <div style={{fontWeight: '500'}}>
+              Founder
+            </div>
+            <div>
+              Our faith is the substance of our future. There is no big success without big sacrifice.
+            </div>
+            <div className='d-flex gap-2 justify-content-center'>
+              <a target="blank" href="https://linkdin.com">
+                <FaLinkedin size={25}/>
+              </a>
+              <a target="blank" href="https://linkdin.com">
+                <FaFacebookSquare size={25}/>
+              </a>
+              <a target="blank" href="https://linkdin.com">
+                <FaInstagramSquare size={25}/>
+              </a>
+            </div>
+          </Col>
+          <Col md={4} sm={12} className='d-flex gap-2 flex-column'>
+            <div>
+            <img src={user} style={{width: '40%'}} alt='user'></img>
+            </div>
+            <div style={{color: 'green', fontWeight: '500'}}>
+              Depi
+            </div>
+            <div style={{fontWeight: '500'}}>
+              Founder
+            </div>
+            <div>
+              Our faith is the substance of our future. There is no big success without big sacrifice.
+            </div>
+            <div className='d-flex gap-2 justify-content-center'>
+              <a target="blank" href="https://linkdin.com">
+                <FaLinkedin size={25}/>
+              </a>
+              <a target="blank" href="https://linkdin.com">
+                <FaFacebookSquare size={25}/>
+              </a>
+              <a target="blank" href="https://linkdin.com">
+                <FaInstagramSquare size={25}/>
+              </a>
+            </div>
+          </Col>
+        </Row>
+      </section>
+
+      <section >
+        <Row className='footer'>
+          <Col className="d-md-flex flex-column gap-3" md={4} sm={12}>
+            <div style={{fontSize: '40px'}}>
+              CV Indo Kharisma
+            </div>
+            <div>
+              We also continue to update the information about the company through social media, for the latest information you can follow our social media.
+            </div>
+            <div className='d-flex gap-3'>
+              <FaFacebookSquare size={30}/>
+              <FaInstagram size={30}/>
+              <FaLinkedin size={30}/>
+            </div>
+          </Col>
+          <Col className="d-md-flex flex-row d-sm-none">           
+          </Col>
+        </Row>
+      </section>
+      <section>
+        <div className="App">
+        <FloatingWhatsApp
+          phoneNumber="123456789"
+          accountName="CV Indo Kharisma"
+          allowEsc
+          allowClickAway
+          notification
+          notificationSound
+          avatar={user}
+          chatMessage="Hello there, 
+          welcome to CV Indo Kharisma Indonesia. 
+          How can we help you ? 😀"
+        />
+      </div>
       </section>
     </Container>
   );
